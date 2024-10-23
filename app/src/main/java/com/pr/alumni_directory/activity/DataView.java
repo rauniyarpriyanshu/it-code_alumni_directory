@@ -14,6 +14,7 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 
+import com.google.android.material.card.MaterialCardView;
 import com.pr.alumni_directory.R;
 import com.pr.alumni_directory.data.AlumniData;
 import com.pr.alumni_directory.fragment.ActivityInterface;
@@ -38,6 +39,9 @@ public class DataView extends AppCompatActivity implements ActivityInterface {
     ImageView dataImage;
     ImageView back;
     ImageView edit;
+
+    MaterialCardView cardView;
+    TextView alumniDiscountInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +72,8 @@ public class DataView extends AppCompatActivity implements ActivityInterface {
         dataImage = findViewById(R.id.data_view_image);
         back = findViewById(R.id.dataView_back);
         edit = findViewById(R.id.dataView_edit);
+        cardView = findViewById(R.id.alumniDicount);
+        alumniDiscountInfo = findViewById(R.id.dataview_alumniDiscountInfo);
     }
 
     @Override
@@ -81,7 +87,7 @@ public class DataView extends AppCompatActivity implements ActivityInterface {
         ViewCompat.setTransitionName(dataImage, transitionName);
         if (data != null) {
             try {
-                InputStream stream = DataView.this.getAssets().open("person1.jpg");
+                InputStream stream = DataView.this.getAssets().open("alumni_picture.png");
                 Drawable drawable = Drawable.createFromStream(stream, null);
                 dataImage.setImageDrawable(drawable);
             } catch (IOException e) {
@@ -151,6 +157,14 @@ public class DataView extends AppCompatActivity implements ActivityInterface {
             businessWeb.setText(data.getSubData().getBusinessWebsite());
             businessCategory.setText(data.getSubData().getBusinessCategory());
             businessDescription.setText(data.getSubData().getBusinessDescription());
+            String alumniDiscount = data.getSubData().getAlumniDiscount();
+            if (alumniDiscount.equalsIgnoreCase("yes")) {
+                cardView.setVisibility(View.VISIBLE);
+                alumniDiscountInfo.setText(data.getSubData().getAlumniDiscountInfo());
+            } else {
+                cardView.setVisibility(View.GONE);
+            }
+
         }
 
 

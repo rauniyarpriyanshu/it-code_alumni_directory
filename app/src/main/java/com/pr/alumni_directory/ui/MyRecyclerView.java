@@ -70,7 +70,7 @@ public class MyRecyclerView extends RecyclerView.Adapter<MyViewHolder> {
         holder.getPersonEmail().setText(myList.get(holder.getAdapterPosition()).getEmail());
         holder.getPersonAddress().setText(myList.get(holder.getAdapterPosition()).getAddress());
 
-        String imageAddress = "person1.jpg";
+        String imageAddress = "ulm_logo.png";
         try {
             InputStream stream = mContext.getAssets().open(imageAddress);
             Drawable drawable = Drawable.createFromStream(stream, null);

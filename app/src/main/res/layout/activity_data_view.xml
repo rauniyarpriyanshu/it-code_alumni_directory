@@ -76,8 +76,7 @@
                 android:id="@+id/data_view_image"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-
-                android:layout_marginTop="4dp"
+                android:layout_margin="5dp"
                 android:contentDescription="TODO"
                 android:scaleType="centerCrop"
                 android:transitionName="myTransition" />
@@ -329,6 +328,51 @@
                         />-->
                 </LinearLayout>
 
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/alumniDicount"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/BusinessDetailsC"
+                app:cardCornerRadius="0dp"
+                style="?attr/materialCardViewElevatedStyle">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/dataview_alumniDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Alumni Dicount: "
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_gift"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dataview_alumniDiscountInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Info"
+                        android:layout_toEndOf="@id/dataview_alumniDiscount"
+                        android:textSize="16sp">
+                    </TextView>
+                </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
