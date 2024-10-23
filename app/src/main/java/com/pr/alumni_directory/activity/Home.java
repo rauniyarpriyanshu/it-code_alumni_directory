@@ -171,7 +171,7 @@ public class Home extends AppCompatActivity implements ActivityInterface {
 
     public boolean databaseExist() {
         File file = new File(this.getExternalCacheDir() + "/databaseFile/" + "database.csv");
-        Toast.makeText(this, "FILE EXIST?: " + file.exists(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "FILE EXIST?: " + file.exists(), Toast.LENGTH_SHORT).show();
         return file.exists();
     }
 
