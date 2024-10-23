@@ -3,6 +3,19 @@
 
 
 # Click Here to preview app online
-[App Link] [https://appetize.io/app/b_vuupxgzjaloxt4d3xbqwmro3lq]  
+[App Link][https://appetize.io/app/b_pqjsvcsfy2o6pl5awz7co74rdy]
+
+To Access This App, You will need login details
+```
+Normal Access:
+username: rauniyarp
+password: passkey1
+
+Admin Access:
+username: admin
+password: password
+
+# Normal Access will not allow you to update and insert, but admin access will give you right of both.
+```
 
 
