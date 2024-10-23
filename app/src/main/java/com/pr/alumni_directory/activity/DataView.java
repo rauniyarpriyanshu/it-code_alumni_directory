@@ -81,7 +81,7 @@ public class DataView extends AppCompatActivity implements ActivityInterface {
         ViewCompat.setTransitionName(dataImage, transitionName);
         if (data != null) {
             try {
-                InputStream stream = DataView.this.getAssets().open("dinesh.jpg");
+                InputStream stream = DataView.this.getAssets().open("person1.jpg");
                 Drawable drawable = Drawable.createFromStream(stream, null);
                 dataImage.setImageDrawable(drawable);
             } catch (IOException e) {
