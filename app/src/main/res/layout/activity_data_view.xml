@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DataView">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/toolBar"
+        style="?attr/materialCardViewElevatedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/dataView_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:contentDescription="TODO"
+
+                android:src="@drawable/ic_arrow_back">
+
+            </ImageView>
+
+            <TextView
+
+                android:id="@+id/dataView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Alumni Details"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+            <ImageView
+                android:id="@+id/dataView_edit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="TODO"
+                android:layout_alignParentEnd="true"
+
+                android:src="@drawable/ic_create">
+
+            </ImageView>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_below="@id/toolBar"
+        android:id="@+id/scrollableBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/data_view_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+
+                android:layout_marginTop="4dp"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:transitionName="myTransition" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/personalDetailsC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@id/data_view_image"
+                android:orientation="vertical"
+                style="?attr/materialCardViewElevatedStyle"
+                >
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Personal Details"
+                        android:textColor="@color/black"
+                        android:textSize="25sp">
+
+                    </TextView>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:dividerInsetEnd="5dp"
+                        app:dividerInsetStart="5dp"
+                        app:dividerThickness="0.2dp" />
+
+                    <TextView
+                        android:id="@+id/dataview_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Person Name Here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_person"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dataview_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Email here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_email"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dataView_jobTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Job Title"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_work"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dataview_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Address here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_location"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/BusinessDetailsC"
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personalDetailsC"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Business Details"
+                        android:textColor="@color/black"
+                        android:textSize="25sp">
+
+                    </TextView>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:dividerInsetEnd="5dp"
+                        app:dividerInsetStart="5dp"
+                        app:dividerThickness="0.2dp" />
+
+                    <TextView
+                        android:id="@+id/dataview_businessName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Business Name Here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_business"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dataview_businessEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Business email here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_email"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dataview_businessPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Business phone number here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_phone"
+                        app:drawableTint="#860029">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dataview_businessLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Address here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_location"
+                        app:drawableTint="#860029" />
+
+                    <TextView
+                        android:id="@+id/dataview_businessWebsiteUrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Website url here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_web_24"
+                        app:drawableTint="#860029" />
+
+                    <TextView
+                        android:id="@+id/dataview_businessCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Category here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_category"
+                        app:drawableTint="#860029" />
+
+                    <TextView
+                        android:id="@+id/dataview_businessDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="description here"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_info"
+                        app:drawableTint="#860029" />
+
+                  <!--  <TextView
+                        android:id="@+id/businessAlumniDsicount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="#860029"
+                        android:fontFamily="@font/samsung_sans_regular"
+                        android:text="Discount description"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_discount"
+                        />-->
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

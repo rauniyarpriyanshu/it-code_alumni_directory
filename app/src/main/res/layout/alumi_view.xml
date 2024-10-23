@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?attr/materialCardViewElevatedStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/av_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+
+                android:id="@+id/av_personImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/download"
+                android:transitionName="myTransition"
+                app:shapeAppearanceOverlay="@style/CornerStyle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/av_personName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Sundar Pichai"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/av_personRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CEO"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/av_header_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/av_header"
+            app:dividerColor="#BCBCBD"
+            app:dividerInsetEnd="15dp"
+            app:dividerInsetStart="15dp"
+            app:dividerThickness="0.8dp">
+
+        </com.google.android.material.divider.MaterialDivider>
+
+        <LinearLayout
+            android:id="@+id/av_job_info_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/av_header_divider"
+            android:layout_margin="10dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/av_personJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Software Enginner"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="22sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/av_personPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="(318) 765-9718"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_phone"
+                app:drawableTint="#860029">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/personEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableTint="#860029"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="5dp"
+                android:text="sampleemail@warhawks.ulm.edu"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_email">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/personLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="#860029"
+                android:fontFamily="@font/roboto_regular"
+                android:text="2307 ferrand st, Monroe, LA 71201"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_location">
+
+            </TextView>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/av_knowMore"
+            style="?attr/materialIconButtonFilledTonalStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/av_job_info_c"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#860029"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="See More"
+            android:textColor="@color/white"
+            app:cornerRadius="14dp"
+            app:icon="@drawable/ic_arrow_right"
+            app:iconGravity="end"
+            app:iconPadding="15dp"
+            app:iconTint="@color/white"
+            app:strokeColor="#FDB913"
+            android:fontFamily="@font/roboto_regular"
+            />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Login">
+
+    <RelativeLayout
+        android:id="@+id/login_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:id="@+id/login_view_imageView"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="14dp"
+            >
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:src="@drawable/download"
+                android:scaleType="centerCrop"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginview_usernameL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:layout_margin="10dp"
+            app:endIconMode="clear_text"
+
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconContentDescription="username"
+            android:layout_below="@id/login_view_imageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_view_username_text"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_view_passwordL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_margin="10dp"
+            app:startIconDrawable="@drawable/ic_password"
+            app:startIconContentDescription="username"
+            app:endIconMode="password_toggle"
+            android:layout_below="@id/loginview_usernameL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_view_password_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+
+            android:layout_below="@id/login_view_passwordL"
+            android:id="@+id/login_view_loginBtn"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Login"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="#860029"
+            >
+
+        </com.google.android.material.button.MaterialButton>
+
+    </RelativeLayout>
+
+</RelativeLayout>
