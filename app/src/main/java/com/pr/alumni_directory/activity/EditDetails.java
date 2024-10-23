@@ -211,6 +211,7 @@ public class EditDetails extends AppCompatActivity implements ActivityInterface 
                                     Objects.requireNonNull(alumniDiscountD.getText()).toString(),
                                     Objects.requireNonNull(businesslogo.getText()).toString()
                             );
+                            showSuccessMessage("Your data has been successfully updated from database.");
                         } else {
 
                             loader.insertCSV(firstName.getText().toString()
@@ -233,7 +234,7 @@ public class EditDetails extends AppCompatActivity implements ActivityInterface 
                                     Objects.requireNonNull(alumniDiscountD.getText()).toString(),
                                     Objects.requireNonNull(businesslogo.getText()).toString(),
                                     Objects.requireNonNull(userId.getText()).toString());
-
+                            showSuccessMessage("Your data has successfully inserted into data set.");
                         }
                     } catch (IOException e) {
                         throw new RuntimeException(e);
@@ -260,6 +261,22 @@ public class EditDetails extends AppCompatActivity implements ActivityInterface 
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder($activity())
                 .setTitle("Error")
                 .setMessage("Please fill all form")
+                .setIcon(R.drawable.ic_warning)
+                .setCancelable(true)
+                .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        builder.show();
+    }
+
+    public void showSuccessMessage(String message) {
+
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder($activity())
+                .setTitle("Success!")
+                .setMessage(message)
                 .setIcon(R.drawable.ic_warning)
                 .setCancelable(true)
                 .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
