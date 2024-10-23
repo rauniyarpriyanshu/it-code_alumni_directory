@@ -260,7 +260,7 @@ public class EditDetails extends AppCompatActivity implements ActivityInterface 
 
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder($activity())
                 .setTitle("Error")
-                .setMessage("Please fill all form")
+                .setMessage("Please fill all form!")
                 .setIcon(R.drawable.ic_warning)
                 .setCancelable(true)
                 .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
